@@ -24,6 +24,16 @@ data → logic → action → learning loop, including governance and writeback.
 
 ---
 
+Plant Operations Ontology — predictive maintenance digital twin\n"
+        "One decision workflow, end to end: **streaming alert → agent diagnosis → "
+        "costed options → governed work order and parts reservation → writeback → "
+        "closed-loop learning.** Synthetic data, Foundry-shaped APIs.")
+
+The important property is not that an LLM is involved. It is that the agent's
+tools are *Ontology operations* — object reads, link traversals, typed queries,
+scenario simulation and governed action proposals — so its reasoning is over a
+connected model of the plant rather than retrieval over documents.
+
 ## Run it
 
 ```bash
@@ -41,17 +51,6 @@ python -m pytest -q
 
 No API key, no database, no network egress required. The agent runs a deterministic
 planner by default, so the demo always works and always tells the same story.
-
-**Optional — Hugging Face-backed reasoning.** Set `HF_TOKEN` and switch *Agent
-reasoning mode* to Hugging Face. The model then drives tool selection itself over the
-same Ontology tool surface, and the trace tab shows exactly which tools it chose.
-
-**Deploy to Hugging Face Spaces.** The YAML header above is the Space config. Create a
-Gradio Space, push `app.py`, `ontology.py`, `simulator.py`, `logic.py`, `agent.py`,
-`actions.py`, `metrics.py`, `foundry_api.py`, `requirements.txt` and this README
-(its YAML header is the Space config; if the Space rejects `sdk_version: 6.27.0`,
-use the nearest Gradio 6.x it offers), and add `HF_TOKEN` as a repository secret if
-you want Hugging Face mode.
 
 ---
 
