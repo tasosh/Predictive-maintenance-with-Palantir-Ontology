@@ -1,0 +1,6 @@
+# Tested, pinned runtime dependencies
+gradio==6.27.0
+pandas==3.0.2
+# Optional: only needed for the Hugging Face-backed agent mode (deterministic mode
+# needs no key and no SDK). Safe to leave installed either way.
+huggingface-hub>=1.16.0,<2.0
